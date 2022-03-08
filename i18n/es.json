@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sophivorus"
+		]
+	},
+	"semantic-rest-api-desc": "Obtener datos de Semantic MediaWiki a través de la API REST."
+}

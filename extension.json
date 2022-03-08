@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Semantic REST API",
+	"version": "0.5",
+	"url": "https://www.mediawiki.org/wiki/Extension:Semantic_REST_API",
+	"author": "[https://www.mediawiki.org/wiki/User:Sophivorus Sophivorus]",
+	"descriptionmsg": "semantic-rest-api-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.34.0"
+	},
+	"MessagesDirs": {
+		"SemanticRESTAPI": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"SemanticRESTAPI": "SemanticRESTAPI.php"
+	},
+	"RestRoutes": [
+		{
+			"path": "/semantic/v0/{title}",
+			"method": "GET",
+			"class": "SemanticRESTAPI"
+		}
+	]
+}
