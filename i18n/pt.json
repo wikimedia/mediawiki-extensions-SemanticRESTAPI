@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"semantic-rest-api-desc": "Obter dados do MediaWiki Semântico através da API REST."
+}

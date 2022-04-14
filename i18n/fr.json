@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Verdy p"
+		]
+	},
+	"semantic-rest-api-desc": "Obtenir des données de Semantic MediaWiki au moyen de l’API REST."
+}
