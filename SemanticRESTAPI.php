@@ -10,13 +10,12 @@ use Wikimedia\ParamValidator\ParamValidator;
 class SemanticRESTAPI extends SimpleHandler {
 
 	/**
-	 * @var string $userAgent User agent for querying the API
+	 * @var string User agent for querying the API
 	 */
 	private static $userAgent =
 		'Extension:SemanticRESTAPI/0.4 (https://www.mediawiki.org/wiki/Extension:SemanticRESTAPI)';
 
 	public function run( $title ) {
-
 		// Query the properties
 		$query = [
 			'action' => 'askargs',
@@ -33,7 +32,7 @@ class SemanticRESTAPI extends SimpleHandler {
 			$property = substr( $property, strpos( $property, ':' ) + 1 );
 			$properties[] = $property;
 		}
-//echo '<pre>'; var_dump( $properties ); exit; // Uncomment to debug
+// echo '<pre>'; var_dump( $properties ); exit; // Uncomment to debug
 
 		// Query the data
 		// We use 'ask' instead of 'askargs' to bypass a harcoded limit in the number of printouts
@@ -48,7 +47,7 @@ class SemanticRESTAPI extends SimpleHandler {
 		$data = array_shift( $data );
 		$data = array_shift( $data );
 		$data = $data['printouts'];
-//echo '<pre>'; var_dump( $data ); exit; // Uncomment to debug
+// echo '<pre>'; var_dump( $data ); exit; // Uncomment to debug
 
 		// Clean the data
 		foreach ( $data as $property => $values ) {
