@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"semantic-rest-api-desc": "Добивање на податоци од Семантички МедијаВики преку приложникот REST."
+}
