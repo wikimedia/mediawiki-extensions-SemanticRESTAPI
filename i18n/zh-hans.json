@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"StarrySky"
+		]
+	},
+	"semantic-rest-api-desc": "通过 REST API 从 Semantic MediaWiki 检索数据。"
+}
