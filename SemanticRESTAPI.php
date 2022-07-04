@@ -10,12 +10,13 @@ use Wikimedia\ParamValidator\ParamValidator;
 class SemanticRESTAPI extends SimpleHandler {
 
 	/**
-	 * @var string User agent for querying the API
+	 * @var string $userAgent User agent for querying the API
 	 */
 	private static $userAgent =
-		'Extension:SemanticRESTAPI/0.4 (https://www.mediawiki.org/wiki/Extension:SemanticRESTAPI)';
+		'Extension:SemanticRESTAPI/0.6 (https://www.mediawiki.org/wiki/Extension:SemanticRESTAPI)';
 
-	public function run( $title ) {
+	public function run( $title, $sub = '' ) {
+
 		// Query the properties
 		$query = [
 			'action' => 'askargs',
@@ -32,22 +33,28 @@ class SemanticRESTAPI extends SimpleHandler {
 			$property = substr( $property, strpos( $property, ':' ) + 1 );
 			$properties[] = $property;
 		}
-// echo '<pre>'; var_dump( $properties ); exit; // Uncomment to debug
+//echo '<pre>'; var_dump( $properties ); exit; // Uncomment to debug
 
 		// Query the data
+		if ( $sub ) {
+			$title = "$title/$sub";
+		}
 		// We use 'ask' instead of 'askargs' to bypass a harcoded limit in the number of printouts
 		$query = [
 			'action' => 'ask',
 			'format' => 'json',
 			'formatversion' => 2,
 			'api_version' => 3,
-			'query' => "[[$title]]|?" . implode( $properties, '|?' ),
+			'query' => "[[$title]]|?" . implode( '|?', $properties ),
 		];
 		$data = self::queryAPI( $query );
+		if ( !$data ) {
+			return $data;
+		}
 		$data = array_shift( $data );
 		$data = array_shift( $data );
 		$data = $data['printouts'];
-// echo '<pre>'; var_dump( $data ); exit; // Uncomment to debug
+//echo '<pre>'; var_dump( $data ); exit; // Uncomment to debug
 
 		// Clean the data
 		foreach ( $data as $property => $values ) {
@@ -94,6 +101,11 @@ class SemanticRESTAPI extends SimpleHandler {
 				self::PARAM_SOURCE => 'path',
 				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => true,
+			],
+			'sub' => [
+				self::PARAM_SOURCE => 'path',
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => false,
 			]
 		];
 	}
