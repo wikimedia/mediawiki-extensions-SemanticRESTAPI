@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"semantic-rest-api-desc": "Dohvaćanje podataka iz Semantic MediaWiki putem REST priložnika."
+}

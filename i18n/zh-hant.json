@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"semantic-rest-api-desc": "透過 REST API 從 Semantic MediaWiki 檢索資料。"
+}
