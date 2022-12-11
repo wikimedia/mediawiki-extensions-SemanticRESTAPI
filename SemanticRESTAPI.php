@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Rest\SimpleHandler;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -77,7 +78,8 @@ class SemanticRESTAPI extends SimpleHandler {
 	 */
 	public function queryAPI( $query ) {
 		global $wgServer, $wgScriptPath;
-		$request = MWHttpRequest::factory( $wgServer . $wgScriptPath . '/api.php?' . http_build_query( $query ) );
+		$request = MediaWikiServices::getInstance()->getHttpRequestFactory()
+			->create( $wgServer . $wgScriptPath . '/api.php?' . http_build_query( $query ) );
 		$request->setUserAgent( self::$userAgent );
 		$status = $request->execute();
 		if ( !$status->isOK() ) {
