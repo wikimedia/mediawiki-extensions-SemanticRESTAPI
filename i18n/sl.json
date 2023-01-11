@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"semantic-rest-api-desc": "Pridobivanje podatkov iz Semantičnega MediaWikija z REST API-jem"
+}
