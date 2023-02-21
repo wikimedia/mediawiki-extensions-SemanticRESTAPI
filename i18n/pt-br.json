@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jaideraf"
+		]
+	},
+	"semantic-rest-api-desc": "Obtém dados do Semantic MediaWiki através da API REST."
+}
