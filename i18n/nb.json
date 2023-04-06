@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"semantic-rest-api-desc": "Hent data fra Semantic MediaWiki via REST-API-et."
+}
