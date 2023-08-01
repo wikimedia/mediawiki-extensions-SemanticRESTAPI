@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"semantic-rest-api-desc": "Dohvaćanje podataka iz Semantic MediaWiki putem REST priložnika."
+}
