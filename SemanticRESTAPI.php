@@ -14,7 +14,7 @@ class SemanticRESTAPI extends SimpleHandler {
 	 * @var string User agent for querying the API
 	 */
 	private static $userAgent =
-		'Extension:SemanticRESTAPI/0.6 (https://www.mediawiki.org/wiki/Extension:SemanticRESTAPI)';
+		'Extension:SemanticRESTAPI/1.0 (https://www.mediawiki.org/wiki/Extension:SemanticRESTAPI)';
 
 	public function run( $title, $sub = '' ) {
 		// Query the properties
