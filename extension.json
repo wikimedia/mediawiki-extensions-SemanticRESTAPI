@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Semantic REST API",
-	"version": "1.0",
+	"version": "1.1",
 	"url": "https://www.mediawiki.org/wiki/Extension:Semantic_REST_API",
 	"author": "[https://www.mediawiki.org/wiki/User:Sophivorus Sophivorus]",
 	"descriptionmsg": "semantic-rest-api-desc",
@@ -25,17 +25,7 @@
 			"class": "SemanticRESTAPI"
 		},
 		{
-			"path": "/v1/page/{title}/{sub}/semantic",
-			"method": "GET",
-			"class": "SemanticRESTAPI"
-		},
-		{
 			"path": "/semantic/v0/{title}",
-			"method": "GET",
-			"class": "SemanticRESTAPI"
-		},
-		{
-			"path": "/semantic/v0/{title}/{sub}",
 			"method": "GET",
 			"class": "SemanticRESTAPI"
 		}

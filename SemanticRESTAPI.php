@@ -16,7 +16,7 @@ class SemanticRESTAPI extends SimpleHandler {
 	private static $userAgent =
 		'Extension:SemanticRESTAPI/1.0 (https://www.mediawiki.org/wiki/Extension:SemanticRESTAPI)';
 
-	public function run( $title, $sub = '' ) {
+	public function run( $title ) {
 		// Query the properties
 		$query = [
 			'action' => 'askargs',
@@ -35,10 +35,6 @@ class SemanticRESTAPI extends SimpleHandler {
 		}
 		// echo '<pre>'; var_dump( $properties ); exit; // Uncomment to debug
 
-		// Query the data
-		if ( $sub ) {
-			$title = "$title/$sub";
-		}
 		// We use 'ask' instead of 'askargs' to bypass a harcoded limit in the number of printouts
 		$query = [
 			'action' => 'ask',
@@ -102,11 +98,6 @@ class SemanticRESTAPI extends SimpleHandler {
 				self::PARAM_SOURCE => 'path',
 				ParamValidator::PARAM_TYPE => 'string',
 				ParamValidator::PARAM_REQUIRED => true,
-			],
-			'sub' => [
-				self::PARAM_SOURCE => 'path',
-				ParamValidator::PARAM_TYPE => 'string',
-				ParamValidator::PARAM_REQUIRED => false,
 			]
 		];
 	}
