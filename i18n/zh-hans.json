@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"StarrySky"
+			"StarrySky",
+			"LittlePaw365"
 		]
 	},
-	"semantic-rest-api-desc": "通过 REST API 从 Semantic MediaWiki 检索数据。"
+	"semantic-rest-api-desc": "通过REST API从语义MediaWiki检索数据。"
 }
