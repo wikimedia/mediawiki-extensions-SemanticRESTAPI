@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"semantic-rest-api-desc": "Haalt gegevens op uit Semantic MediaWiki via de REST API."
+}
