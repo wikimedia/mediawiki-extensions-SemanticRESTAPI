@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tensama0415"
+		]
+	},
+	"semantic-rest-api-desc": "시맨틱 미디어위키에서 REST API를 통해 데이터를 검색합니다."
+}
