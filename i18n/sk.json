@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"semantic-rest-api-desc": "Získava údaje zo Semantic MediaWiki cez REST API."
+}
