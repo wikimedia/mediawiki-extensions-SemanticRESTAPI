@@ -48,7 +48,7 @@ class SemanticRESTAPI extends SimpleHandler {
 			if ( $strings ) {
 				$label = $property->getCanonicalLabel();
 				if ( $label ) {
-					$output[ $label ] = implode( ', ', $strings );
+					$output[ $label ] = $strings;
 				}
 			}
 		}
